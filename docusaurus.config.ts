@@ -8,6 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://exploit-experts.github.io',
+
   baseUrl: '/Docs-RickAndMorty/',
 
   organizationName: 'Exploit-Experts',
@@ -62,6 +63,12 @@ const config: Config = {
           position: 'left',
           label: 'Documentação',
         },
+        {
+          type: 'doc',
+          docId: 'apidoc/intro',
+          position: 'left',
+          label: 'API',
+        },  
         {
           href: 'https://github.com/Exploit-Experts/Docs-RickAndMorty',
           label: 'GitHub',

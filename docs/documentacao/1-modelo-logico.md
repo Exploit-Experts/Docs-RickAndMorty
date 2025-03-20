@@ -74,7 +74,7 @@ Este documento descreve o modelo lógico do projeto, incluindo as entidades, atr
 - **User → Favorites_Episodes**: Um usuário pode ter vários episódios favoritos (relacionamento 1,n).
 - **User → Favorites_Characters**: Um usuário pode ter vários personagens favoritos (relacionamento 1,n).
 - **User → Favorites_Locations**: Um usuário pode ter várias localizações favoritas (relacionamento 1,n).
-- **Characters → Locations**: Um personagem está associado a uma localização (relacionamento 1,1).
+- **Characters → Locations**: Vários personagens estão associados a uma localização (relacionamento n,1).
 - **Episodes → Favorites_Episodes**: Um episódio pode ser favoritado por vários usuários (relacionamento 1,n).
 - **Characters → Favorites_Characters**: Um personagem pode ser favoritado por vários usuários (relacionamento 1,n).
 - **Locations → Favorites_Locations**: Uma localização pode ser favoritada por vários usuários (relacionamento 1,n).

@@ -53,25 +53,28 @@ Este modelo conceitual descreve a estrutura de um sistema de gerenciamento de da
   - `alocation_id`: Identificador do local associado ao personagem.
 
 - **Relacionamentos:**
-  - Um personagem pode aparecer em vários episódios (`1:N`).
-  - Um personagem pode estar associado a um local (`1:1`).
+  - Vários personagens podem aparecer em vários episódios (`N:N`).
+  - Vários personagens podem estar associados a um local (`N:1`).
 
 ### 5. Local (`location`)
 
 - **Atributos:**
+  - `id`: Id do local.
   - `name`: Nome do local.
   - `dimension`: Dimensão ou universo ao qual o local pertence.
   - `location_type`: Tipo de local (por exemplo, planeta, cidade, dimensão alternativa).
-  - `address`: Endereço ou descrição do local.
 
 - **Relacionamentos:**
-  - Um local pode estar associado a um episódio (`1:1`).
-  - Um local pode estar associado a um personagem (`1:1`).
+  - Um local pode estar associado a vários personagens (`1:N`).
 
 ## Relacionamentos entre Entidades
 
-- **Usuário e Favoritos (`1:N`):** Um usuário pode ter vários itens favoritados, como personagens, episódios ou locais.
-- **Favoritos e Episódios/Personagens/Locais (`1:N`):** Um favorito pode estar relacionado a um episódio, personagem ou local.
-- **Episódios e Personagens (`1:N`):** Um episódio pode ter vários personagens.
-- **Episódios e Local (`1:1`):** Um episódio pode estar associado a um local específico.
-- **Personagens e Local (`1:1`):** Um personagem pode estar associado a um local.
+- **Usuário e Favoritos (`N:N`):** Vários usuários podem ter vários itens favoritados, como personagens, episódios ou locais.
+- **Favoritos e Episódios/Personagens/Locais (`1:1`):** Um favorito pode ser um episódio, personagem ou local.
+- **Episódios e Personagens (`N:N`):** Vários episódios podem ter vários personagens.
+- **Personagens e Local (`N:1`):** Vários personagens podem estar associado a um local.
+
+<details>
+<summary>Modelo Conceitual</summary>
+![Modelo Conceitual](/img/modeloConceitual.jpeg)
+</details>
