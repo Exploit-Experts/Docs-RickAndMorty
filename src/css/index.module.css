@@ -1,3 +1,6 @@
+/* ============================
+   VARIÁVEIS GLOBAIS
+   ============================ */
 :root {
   --rick-portal-green: #97ce4c;
   --rick-portal-green-dark: #86bd3c;
@@ -7,6 +10,17 @@
   --space-dark: #1a1c23;
 }
 
+/* ============================
+   ANIMAÇÕES
+   ============================ */
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 10px rgba(151, 206, 76, 0.3); }
+  100% { text-shadow: 0 0 20px rgba(151, 206, 76, 0.3); }
+}
+
+/* ============================
+   SEÇÃO HERO
+   ============================ */
 .heroBanner {
   padding: 14rem 0;
   height: 100vh;
@@ -17,7 +31,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
 }
 
 .heroBanner::before {
@@ -41,35 +54,6 @@
   height: 100%;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    text-align: center;
-    background-image: none !important;
-    background-color: #1b1b1d;
-    padding: 2rem;
-    height: auto;
-    min-height: 80vh;
-  }
-  
-  [data-theme='light'] .heroBanner {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/img/wp-light.png');
-    background-size: cover;
-  }
-  
-  [data-theme='dark'] .heroBanner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/img/wp-dark.png');
-    background-size: cover;
-  }
-  
-  .heroBanner h1 {
-    font-size: 2.2rem;
-  }
-  
-  .heroBanner .database {
-    font-size: 2.2rem;
-  }
-}
-
 .heroBanner h1 {
   font-size: 3.5rem;
   font-weight: 900;
@@ -88,88 +72,6 @@
   animation: glowPulse 3s infinite alternate-reverse;
 }
 
-@keyframes glowPulse {
-  0% { text-shadow: 0 0 10px rgba(151, 206, 76, 0.3); }
-  100% { text-shadow: 0 0 20px rgba(151, 206, 76, 0.3); }
-}
-
-.features {
-  display: flex;
-  align-items: center;
-  padding: 5rem 0;
-  width: 100%;
-  color: var(--rick-portal-green);
-  position: relative;
-  overflow: hidden;
-}
-
-.features::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.05;
-  background-image: radial-gradient(circle at center, var(--rick-portal-green) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
-  fill: var(--rick-portal-green);
-  filter: drop-shadow(0 0 1px rgba(151, 206, 76, 0.3));
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-[data-theme='dark'] .featureSvg {
-  fill: var(--rick-portal-green);
-  filter: drop-shadow(0 0 5px rgba(151, 206, 76, 0.4));
-}
-
-[data-theme='dark'] .features {
-  color: var(--rick-portal-green);
-}
-
-.featureSvg:hover {
-  transform: rotate(5deg) scale(1.08);
-  filter: drop-shadow(0 0 6px rgba(151, 206, 76, 0.5));
-}
-
-.featureCard {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 1rem;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(151, 206, 76, 0.2);
-  transition: all 0.3s ease;
-}
-
-.featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(151, 206, 76, 0.2);
-  border-color: rgba(151, 206, 76, 0.4);
-}
-
-[data-theme='dark'] .featureCard {
-  background: rgba(26, 28, 35, 0.7);
-}
-
-@media screen and (max-width: 768px) {
-  .features {
-    flex-direction: column;
-    padding: 3rem 1rem;
-  }
-  
-  .featureSvg {
-    height: 150px;
-    width: 150px;
-  }
-}
-
-/* Hero section enhancements */
 .heroSubtitle {
   font-size: 1.5rem;
   color: white;
@@ -179,6 +81,9 @@
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* ============================
+   BOTÕES
+   ============================ */
 .buttonGroup {
   margin-top: 2rem;
   display: flex;
@@ -223,7 +128,9 @@
   color: #ffffff;
 }
 
-/* Section titles */
+/* ============================
+   TÍTULOS DE SEÇÃO
+   ============================ */
 .sectionTitle {
   text-align: center;
   margin-bottom: 3rem;
@@ -256,16 +163,68 @@
   margin: 1rem auto 0;
 }
 
-/* Quotes section */
+/* ============================
+   SEÇÃO DE RECURSOS
+   ============================ */
+.features {
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  width: 100%;
+  color: var(--rick-portal-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(circle at center, var(--rick-portal-green) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+  fill: var(--rick-portal-green);
+  filter: drop-shadow(0 0 1px rgba(151, 206, 76, 0.3));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.featureSvg:hover {
+  transform: rotate(5deg) scale(1.08);
+  filter: drop-shadow(0 0 6px rgba(151, 206, 76, 0.5));
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(151, 206, 76, 0.2);
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(151, 206, 76, 0.2);
+  border-color: rgba(151, 206, 76, 0.4);
+}
+
+/* ============================
+   SEÇÃO DE CITAÇÕES
+   ============================ */
 .quotesSection {
   background-color: var(--space-dark);
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
-}
-
-[data-theme='light'] .quotesSection {
-  background-color: #f5f6f7;
 }
 
 .quotesSection::before {
@@ -319,7 +278,9 @@
   color: var(--rick-portal-blue);
 }
 
-/* Stats section */
+/* ============================
+   SEÇÃO DE ESTATÍSTICAS
+   ============================ */
 .statsSection {
   padding: 5rem 0;
   background: linear-gradient(135deg, rgba(151, 206, 76, 0.05) 0%, rgba(68, 187, 201, 0.05) 100%);
@@ -365,8 +326,77 @@
   color: var(--rick-portal-blue);
 }
 
-/* Responsive adjustments */
+/* ============================
+   TEMAS ESCURO/CLARO
+   ============================ */
+[data-theme='dark'] .featureSvg {
+  fill: var(--rick-portal-green);
+  filter: drop-shadow(0 0 5px rgba(151, 206, 76, 0.4));
+}
+
+[data-theme='dark'] .features {
+  color: var(--rick-portal-green);
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: white;
+}
+
+[data-theme='dark'] .featureCard {
+  background: rgba(26, 28, 35, 0.7);
+}
+
+[data-theme='light'] .quotesSection {
+  background-color: #f5f6f7;
+}
+
+[data-theme='light'] .heroSubtitle {
+  color: #333;
+}
+
+/* ============================
+   RESPONSIVIDADE
+   ============================ */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    text-align: center;
+    background-image: none !important;
+    background-color: #1b1b1d;
+    padding: 2rem;
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  [data-theme='light'] .heroBanner {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/img/wp-light.png');
+    background-size: cover;
+  }
+  
+  [data-theme='dark'] .heroBanner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/img/wp-dark.png');
+    background-size: cover;
+  }
+  
+  .heroBanner h1 {
+    font-size: 2.2rem;
+  }
+  
+  .heroBanner .database {
+    font-size: 2.2rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+  
+  .featureSvg {
+    height: 150px;
+    width: 150px;
+  }
+  
   .quotesGrid {
     grid-template-columns: 1fr;
   }
