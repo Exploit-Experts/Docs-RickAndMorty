@@ -58,11 +58,9 @@ export default {
   themeConfig: {
     navbar: {
       items: [
-        // highlight-start
         {
           type: 'localeDropdown',
         },
-        // highlight-end
       ],
     },
   },
