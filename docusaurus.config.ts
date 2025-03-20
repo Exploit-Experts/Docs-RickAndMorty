@@ -7,7 +7,7 @@ const config: Config = {
   tagline: 'Rick And Morty are cool',
   favicon: 'img/favicon.ico',
 
-  url: 'https://exploit-experts.github.io/Docs-RickAndMorty/',
+  url: 'https://exploit-experts.github.io',
 
   baseUrl: '/Docs-RickAndMorty/',
 
