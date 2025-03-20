@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #97ce4c; /* Verde portal */
+  --ifm-color-primary: #97ce4c; 
   --ifm-color-primary-dark: #82b040;
   --ifm-color-primary-darker: #6e9935;
   --ifm-color-primary-darkest: #5a7f2b;
@@ -11,7 +11,7 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #ff9800; /* Laranja Rick */
+  --ifm-color-primary: #ff9800; 
   --ifm-color-primary-dark: #e68900;
   --ifm-color-primary-darker: #cc7a00;
   --ifm-color-primary-darkest: #b36b00;
