@@ -41,9 +41,6 @@ const config: Config = {
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
       },
     ],
   ],

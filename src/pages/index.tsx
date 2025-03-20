@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-import styles from './index.module.css';
+import styles from '../css/index.module.css';
 
 type FeatureItem = {
   title: string;
