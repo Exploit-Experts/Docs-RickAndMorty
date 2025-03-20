@@ -78,3 +78,8 @@ Este documento descreve o modelo lógico do projeto, incluindo as entidades, atr
 - **Episodes → Favorites_Episodes**: Um episódio pode ser favoritado por vários usuários (relacionamento 1,n).
 - **Characters → Favorites_Characters**: Um personagem pode ser favoritado por vários usuários (relacionamento 1,n).
 - **Locations → Favorites_Locations**: Uma localização pode ser favoritada por vários usuários (relacionamento 1,n).
+
+<details>
+<summary>Modelo Lógico</summary>
+![Modelo Logico](/img/modeloLogico.jpeg)
+</details>

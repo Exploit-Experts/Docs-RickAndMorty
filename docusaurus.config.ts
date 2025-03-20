@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -7,12 +7,11 @@ const config: Config = {
   tagline: 'Rick And Morty are cool',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://exploit-experts.github.io',
+  baseUrl: '/Docs-RickAndMorty/',
 
-  baseUrl: '/',
-
-  organizationName: 'Exploit Experts', 
-  projectName: 'RickAndMorty Api', 
+  organizationName: 'Exploit-Experts',
+  projectName: 'Docs-RickAndMorty', 
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,9 +26,8 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          sidebarPath: require.resolve('./sidebars.ts'),
+          editUrl: 'https://github.com/Exploit-Experts/Docs-RickAndMorty/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -37,16 +35,15 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/Exploit-Experts/Docs-RickAndMorty/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
-      } satisfies Preset.Options,
+      },
     ],
   ],
 
@@ -55,8 +52,8 @@ const config: Config = {
     navbar: {
       title: 'RickAndMorty\'s Database',
       logo: {
-        alt: 'RickAndMorty Database Logo',
-        src: 'img/logo.svg',
+        alt: 'Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -74,14 +71,13 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      
       copyright: `Copyright © ${new Date().getFullYear()} Rick and Morty DataBase API. Todos os direitos reservados.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  } satisfies Preset.ThemeConfig,
+  },
 };
 
 export default config;
