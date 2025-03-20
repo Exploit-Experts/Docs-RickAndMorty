@@ -1,25 +1,70 @@
 .heroBanner {
-  padding: 8rem 0;
-  text-align: center;
+  padding: 16rem 0;
+  text-align: left;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+[data-theme='light'] .heroBanner {
+  background-image: url('/img/wp-light.png');
+  height: 100%;
+}
+
+[data-theme='dark'] .heroBanner {
+  background-image: url('/img/wp-dark.png');
+  height: 100%;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 1rem;
+    background-image: none; 
   }
 }
+
+.heroBanner h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--ifm-color-primary);
+  margin: 0;
+}
+
+.heroBanner .database {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--ifm-color-primary-dark);
+  margin-top: 0.5rem;
+}
+
 
 .features {
   display: flex;
   align-items: center;
   padding: 4rem 0;
   width: 100%;
+  color: #2e8555;
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
-  fill: currentColor;
+  fill: #2e8555;
+  transition: transform 0.3s ease-in-out;
 }
+
+[data-theme='dark'] .featureSvg {
+  fill: #fff;
+}
+
+[data-theme='dark'] .features {
+  color: #fff;
+}
+
+.featureSvg:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+

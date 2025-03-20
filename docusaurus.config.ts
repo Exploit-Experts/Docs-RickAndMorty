@@ -49,7 +49,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'RickAndMorty\'s Database',
       logo: {

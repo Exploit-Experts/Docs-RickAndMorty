@@ -1,28 +1,26 @@
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #97ce4c; /* Verde portal */
+  --ifm-color-primary-dark: #82b040;
+  --ifm-color-primary-darker: #6e9935;
+  --ifm-color-primary-darkest: #5a7f2b;
+  --ifm-color-primary-light: #a8d65e;
+  --ifm-color-primary-lighter: #b9df70;
+  --ifm-color-primary-lightest: #cbe882;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  color: #2e8555;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  color: #32d8b4;
+  --ifm-color-primary: #ff9800; /* Laranja Rick */
+  --ifm-color-primary-dark: #e68900;
+  --ifm-color-primary-darker: #cc7a00;
+  --ifm-color-primary-darkest: #b36b00;
+  --ifm-color-primary-light: #ffa726;
+  --ifm-color-primary-lighter: #ffb74d;
+  --ifm-color-primary-lightest: #ffc57a;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] .featureSvg {
-  fill: #ffffff;
+  fill: #2e8555; 
 }

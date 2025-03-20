@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Vizualize e acesse todos os episódios e suas respectivas informações da série Rick and Morty.
+        Reviva as aventuras mais insanas e descubra os segredos escondidos em cada episódio de Rick and Morty. Wubba Lubba Dub-Dub!
       </>
     ),
   },
@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Conheça todos os personagens da série Rick and Morty, com suas respectivas informações.
+        Conheça os personagens mais bizarros e hilários do multiverso. De Morty a Mr. Meeseeks, todos estão aqui esperando por você!
       </>
     ),
   },
@@ -36,7 +36,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Explore as localizações da série Rick and Morty, com suas respectivas informações.
+        Explore dimensões malucas e planetas estranhos. Cuidado com os portais, você nunca sabe onde pode acabar!
       </>
     ),
   },
@@ -62,8 +62,9 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          Rick and Morty's
         </Heading>
+        <span className={styles.database}>Database</span>
       </div>
     </header>
   );
@@ -73,8 +74,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Rick and Morty Database">  
       <HomepageHeader />
       <main>
         <section className={styles.features}>
