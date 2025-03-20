@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 # Arquitetura
 
-## _DataLake_ ##
+## DataLake ##
 
 ## 1. Escalabilidade
 
@@ -43,7 +43,7 @@ Para facilitar a integração, sugere-se o uso de um **API Gateway**. Essa ferra
 Processar e analisar dados em tempo real é um desafio, especialmente quando se lida com grandes volumes de dados que precisam ser processados rapidamente.
 
 ### Solução:
-Para análises em tempo real, recomenda-se o uso de **Apache Spark Streaming** ou **Apache Flink**. Essas ferramentas permitem o processamento e a análise de dados em tempo real, fornecendo insights instantâneos e permitindo a criação de dashboards dinâmicos.
+Para análises em tempo real, recomenda-se o uso de **Apache Kafkak**. Essas ferramentas permitem o processamento e a análise de dados em tempo real, fornecendo insights instantâneos e permitindo a criação de dashboards dinâmicos.
 
 ---
 
@@ -87,3 +87,8 @@ Para análises em tempo real, recomenda-se o uso de **Apache Spark Streaming** o
 ## Conclusão
 
 Este documento descreve uma arquitetura Data Lake robusta e escalável, projetada para lidar com grandes volumes de dados e fornecer análises em tempo real. Com foco em escalabilidade, governança, desempenho, integração e análises em tempo real, essa arquitetura visa oferecer uma experiência rica e personalizada para os usuários, permitindo que eles explorem seus favoritos e recebam recomendações personalizadas.
+
+<details>
+<summary>Data Lake</summary>
+![Data Lake](/img/dataLake.jpeg)
+</details>

@@ -65,7 +65,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'apidoc/intro',
+          docId: '/category/api',
           position: 'left',
           label: 'API',
         },  
