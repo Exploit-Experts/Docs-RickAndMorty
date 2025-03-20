@@ -8,12 +8,12 @@ Este endpoint fornece acesso a informações sobre episódios da série Rick and
 
 ## Endpoints
 
-- `GET /episodes` - Recupera todos os episódios da primeira página.
-- `GET /episodes?page=2` - Recupera todos os episódios de uma página específica.
+- `GET /api/v1/episodes` - Recupera todos os episódios da primeira página.
+- `GET /api/v1/episodes?page=2` - Recupera todos os episódios de uma página específica.
 
 ### Filtragem de Episódios
 
-`GET /episodes`
+`GET /api/v1/episodes`
 
 #### Parâmetros
 
@@ -25,4 +25,4 @@ Este endpoint fornece acesso a informações sobre episódios da série Rick and
 
 ### Episódio Único
 
-`GET /episodes/{id}` - Recupera um episódio específico por ID.
+`GET /api/v1/episodes/{id}` - Recupera um episódio específico por ID.

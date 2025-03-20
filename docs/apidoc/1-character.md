@@ -8,12 +8,12 @@ Este endpoint fornece acesso a informações detalhadas sobre personagens do uni
 
 ## Endpoints
 
-- `GET /characters` - Recupera todos os personagens da primeira página.
-- `GET /characters?page=1` - Recupera todos os personagens de uma página específica.
+- `GET /api/v1/characters` - Recupera todos os personagens da primeira página.
+- `GET /api/v1/characters?page=1` - Recupera todos os personagens de uma página específica.
 
 ### Filtragem de Personagens
 
-`GET /characters`
+`GET /api/v1/characters`
 
 #### Parâmetros
 
@@ -28,10 +28,10 @@ Este endpoint fornece acesso a informações detalhadas sobre personagens do uni
 
 ### Personagem Único
 
-`GET /characters/{id}` - Recupera um personagem específico por ID.
+`GET /api/v1/characters/{id}` - Recupera um personagem específico por ID.
 
 ### Avatar do Personagem
 
-`GET /characters/avatar/{id}.jpeg` - Recupera o avatar de um personagem específico por ID.
+`GET /api/v1/characters/avatar/{id}.jpeg` - Recupera o avatar de um personagem específico por ID.
 
 

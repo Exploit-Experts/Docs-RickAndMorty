@@ -8,12 +8,12 @@ Este endpoint fornece acesso a informações sobre localizações do universo Ri
 
 ## Endpoints
 
-- `GET /locations` - Recupera todas as localizações da primeira página.
-- `GET /locations?page=2` - Recupera todas as localizações de uma página específica.
+- `GET /api/v1/locations` - Recupera todas as localizações da primeira página.
+- `GET /api/v1/locations?page=2` - Recupera todas as localizações de uma página específica.
 
 ### Filtragem de Localizações
 
-`GET /locations`
+`GET /api/v1/locations`
 
 #### Parâmetros
 
@@ -26,4 +26,4 @@ Este endpoint fornece acesso a informações sobre localizações do universo Ri
 
 ### Localização Única
 
-`GET /locations/{id}` - Recupera uma localização específica por ID.
+`GET /api/v1/locations/{id}` - Recupera uma localização específica por ID.
