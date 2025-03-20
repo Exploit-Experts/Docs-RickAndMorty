@@ -57,26 +57,18 @@ Para executar este projeto localmente, siga os passos abaixo:
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
 1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/amazing-feature`)
-3. Commit suas mudanças (`git commit -m 'Add some amazing feature'`)
-4. Push para a branch (`git push origin feature/amazing-feature`)
+2. Crie uma branch para sua feature (`git checkout -b feature/feature`)
+3. Commit suas mudanças (`git commit -m 'Add feature'`)
+4. Push para a branch (`git push origin feature/feature`)
 5. Abra um Pull Request
 
 ## API Documentation
 
 A documentação da API inclui:
+- Documentação
 - Endpoints disponíveis
 - Parâmetros de requisição
-- Exemplos de respostas
-- Autenticação (se aplicável)
-- Limitações e tratamento de erros
 
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## Contato
-
-Exploit Experts - [GitHub Organization](https://github.com/Exploit-Experts)
-
-Link do Projeto: [https://github.com/Exploit-Experts/Docs-RickAndMorty](https://github.com/Exploit-Experts/Docs-RickAndMorty)
