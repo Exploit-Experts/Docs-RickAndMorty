@@ -42,6 +42,37 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
+const FamousQuotes = [
+  {
+    quote: "Wubba Lubba Dub-Dub!",
+    character: "Rick Sanchez"
+  },
+  {
+    quote: "Nobody exists on purpose. Nobody belongs anywhere. Everybody's gonna die. Come watch TV?",
+    character: "Morty Smith"
+  },
+  {
+    quote: "I'm a pickle, Morty! I'm Pickle Riiiick!",
+    character: "Rick Sanchez"
+  },
+  {
+    quote: "Sometimes science is more art than science. A lot of people don't get that.",
+    character: "Rick Sanchez"
+  },
+  {
+    quote: "I'm not a villain. I'm a high-functioning sociopath.",
+    character: "Rick Sanchez"
+  }
+];
+
+const SeriesStats = [
+  { number: "6+", label: "Temporadas" },
+  { number: "61+", label: "Episódios" },
+  { number: "826+", label: "Personagens" },
+  { number: "126+", label: "Localizações" },
+  { number: "800M", label: "Visualizações" }
+];
+
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
@@ -56,6 +87,24 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
+function QuoteItem({quote, character}) {
+  return (
+    <div className={styles.quoteCard}>
+      <blockquote>"{quote}"</blockquote>
+      <cite>— {character}</cite>
+    </div>
+  );
+}
+
+function StatItem({number, label}) {
+  return (
+    <div className={styles.statItem}>
+      <div className={styles.statNumber}>{number}</div>
+      <div className={styles.statLabel}>{label}</div>
+    </div>
+  );
+}
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -65,6 +114,17 @@ function HomepageHeader() {
           Rick and Morty's
         </Heading>
         <span className={styles.database}>Database</span>
+        <p className={styles.heroSubtitle}>
+          O guia definitivo para o universo mais caótico da televisão!
+        </p>
+        <div className={styles.buttonGroup}>
+          <a className={styles.buttonGreen} href="#features">
+            Explorar
+          </a>
+          <a className={styles.buttonBlue} href="docs/category/documentação">
+            Ver Docs
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -78,11 +138,43 @@ export default function Home(): ReactNode {
       description="Rick and Morty Database">  
       <HomepageHeader />
       <main>
-        <section className={styles.features}>
+        <section className={styles.features} id="features">
           <div className="container">
+            <div className={styles.sectionTitle}>
+              <Heading as="h2">Explore o Multiverso</Heading>
+              <p>Tudo que você precisa saber sobre Rick and Morty em um só lugar</p>
+            </div>
             <div className="row">
               {FeatureList.map((props, idx) => (
                 <Feature key={idx} {...props} />
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        <section className={styles.quotesSection}>
+          <div className="container">
+            <div className={styles.sectionTitle}>
+              <Heading as="h2">Citações Icônicas</Heading>
+              <p>As frases mais memoráveis da série</p>
+            </div>
+            <div className={styles.quotesGrid}>
+              {FamousQuotes.map((quote, idx) => (
+                <QuoteItem key={idx} {...quote} />
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        <section className={styles.statsSection}>
+          <div className="container">
+            <div className={styles.sectionTitle}>
+              <Heading as="h2">Rick and Morty em Números</Heading>
+              <p>Estatísticas impressionantes da série</p>
+            </div>
+            <div className={styles.statsGrid}>
+              {SeriesStats.map((stat, idx) => (
+                <StatItem key={idx} {...stat} />
               ))}
             </div>
           </div>

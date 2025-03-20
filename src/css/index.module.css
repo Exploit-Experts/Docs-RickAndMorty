@@ -168,3 +168,234 @@
     width: 150px;
   }
 }
+
+/* Hero section enhancements */
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 1.5rem;
+  max-width: 600px;
+  line-height: 1.4;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonGroup {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttonGreen, .buttonBlue {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buttonGreen {
+  background-color: var(--rick-portal-green);
+  color: #ffffff;
+}
+
+.buttonGreen:hover {
+  background-color: var(--rick-portal-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(151, 206, 76, 0.4);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.buttonBlue {
+  background-color: var(--rick-portal-blue);
+  color: #ffffff;
+}
+
+.buttonBlue:hover {
+  background-color: #34a2b1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(68, 187, 201, 0.4);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Section titles */
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle h2 {
+  font-size: 2.5rem;
+  color: var(--rick-portal-green);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--rick-portal-blue);
+  border-radius: 2px;
+}
+
+.sectionTitle p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+/* Quotes section */
+.quotesSection {
+  background-color: var(--space-dark);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='light'] .quotesSection {
+  background-color: #f5f6f7;
+}
+
+.quotesSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.quotesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.quoteCard {
+  background: rgba(151, 206, 76, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  border-left: 4px solid var(--rick-portal-green);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.quoteCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(151, 206, 76, 0.2);
+  border-left-color: var(--rick-portal-blue);
+}
+
+.quoteCard blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--rick-portal-green);
+  margin: 0 0 1rem 0;
+  position: relative;
+  line-height: 1.6;
+}
+
+.quoteCard cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--rick-portal-blue);
+}
+
+/* Stats section */
+.statsSection {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, rgba(151, 206, 76, 0.05) 0%, rgba(68, 187, 201, 0.05) 100%);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.statItem {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(151, 206, 76, 0.1);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(151, 206, 76, 0.1);
+  border-color: rgba(151, 206, 76, 0.3);
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--rick-portal-green);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--rick-portal-green) 0%, var(--rick-portal-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--rick-portal-blue);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .quotesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .buttonGroup {
+    justify-content: center;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buttonGreen, .buttonBlue {
+    width: 100%;
+    text-align: center;
+  }
+}
