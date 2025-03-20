@@ -355,6 +355,7 @@
   margin-bottom: 0.5rem;
   background: linear-gradient(90deg, var(--rick-portal-green) 0%, var(--rick-portal-blue) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
