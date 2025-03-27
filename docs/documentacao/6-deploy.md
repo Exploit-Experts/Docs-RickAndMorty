@@ -50,7 +50,8 @@ RickAndMorty-Spring-API
 │   │   │   └── messages.properties
 │   └── test
 ├── target
-└── pom.xml
+├── pom.xml
+└── dockerfile
 ```
 
 ## Configuração do Dockerfile para o Projeto
